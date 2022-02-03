@@ -16,7 +16,7 @@ body {
 
 header {
   background-color: #09ff7d;
-  padding: 1.2rem 0;
+  padding: 0.5rem 0;
 }
 
 nav {
@@ -25,6 +25,28 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+nav a {
+  text-decoration: none;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo-container h1 {
+  font-size: 18px;
+  margin-left: 2px;
+}
+
+.ham-btn {
+  display: none;
+}
+
+.logo-text {
+  color: whitesmoke;
 }
 
 .menu > li,
@@ -81,5 +103,24 @@ nav {
   100% {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@media screen and (max-width: 830px) {
+  .ham-btn {
+    display: block;
+    height: 70px;
+    width: 70px;
+    border: 4px solid white;
+  }
+
+  .hamburger {
+    width: 100%;
+    height: 4px;
+    background-color: white;
+  }
+
+  .menu {
+    display: none;
   }
 }
