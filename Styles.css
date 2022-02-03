@@ -157,6 +157,8 @@ nav a {
     transition: background-color 0.8s ease;
     width: 120px;
     text-align: center;
+    opacity: 0;
+    transition: opacity 150ms ease-in-out;
   }
 
   .menu a:hover {
@@ -188,6 +190,10 @@ nav a {
   }
   .toogle-nav:checked ~ .menu {
     transform: scale(1, 1);
+  }
+  .toogle-nav:checked ~ .menu a {
+    opacity: 1;
+    transition: opacity 250ms ease-in-out 250ms;
   }
 
   .nav-btn {
