@@ -17,6 +17,10 @@ body {
 header {
   background-color: #09ff7d;
   padding: 0.5rem 0;
+  /* height: 15vh;
+  position: fixed;
+  z-index: 999;
+  width: 100%; */
 }
 
 nav {
@@ -39,10 +43,6 @@ nav a {
 .logo-container h1 {
   font-size: 18px;
   margin-left: 2px;
-}
-
-.ham-btn {
-  display: none;
 }
 
 .logo-text {
@@ -77,10 +77,10 @@ nav a {
 .submenu {
   position: absolute;
   width: 100%;
-  left: 0px;
+  left: 0;
   background-color: #09ff7d;
   display: none;
-  transition: all 3s ease;
+  /* transition: all 3s ease; */
 }
 .submenu a {
   text-align: left;
@@ -89,10 +89,10 @@ nav a {
 
 .menu li:hover > .submenu {
   display: block;
-  animation: slideLeft 0.4s ease;
+  animation: slideDown 0.4s ease;
 }
 
-@keyframes slideLeft {
+@keyframes slideDown {
   0% {
     opacity: 0;
     transform: translateY(-100px);
@@ -106,21 +106,118 @@ nav a {
   }
 }
 
+@keyframes slideLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.toogle-nav {
+  display: none;
+}
+.nav-btn {
+  display: none;
+}
+
 @media screen and (max-width: 830px) {
-  .ham-btn {
-    display: block;
-    height: 70px;
-    width: 70px;
-    border: 4px solid white;
+  nav {
+    margin-left: 20px;
   }
-
-  .hamburger {
-    width: 100%;
-    height: 4px;
-    background-color: white;
-  }
-
   .menu {
+    position: absolute;
+    right: 0;
+    top: 12%;
+    background-color: #09ff7d;
+    transform: scale(1, 0);
+    transition: transform 400ms ease-in-out;
+    transform-origin: top;
+  }
+
+  .menu > li,
+  .menu > a {
+    display: block;
+  }
+
+  .menu li {
+    position: relative;
+  }
+
+  .menu a {
+    text-decoration: none;
+    color: white;
+    display: block;
+    padding: 10px 1rem;
+    transition: background-color 0.8s ease;
+    width: 120px;
+    text-align: center;
+  }
+
+  .menu a:hover {
+    background-color: #a5fecf;
+    transition: all 0.8s ease;
+    border-radius: 4px;
+  }
+
+  .submenu {
+    position: absolute;
+    width: 100%;
+    left: -120px;
+    top: 0;
+    background-color: #48f398;
     display: none;
+    transition: all 3s ease;
+  }
+  .submenu a {
+    text-align: left;
+    width: 100%;
+  }
+
+  .menu li:hover > .submenu {
+    display: block;
+    animation: slideLeft 0.4s ease;
+  }
+  .toogle-nav {
+    display: none;
+  }
+  .toogle-nav:checked ~ .menu {
+    transform: scale(1, 1);
+  }
+
+  .nav-btn {
+    height: 40px;
+    width: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  .nav-btn span,
+  .nav-btn span::after,
+  .nav-btn span::before {
+    display: block;
+    height: 3px;
+    width: 35px;
+    background-color: white;
+    position: relative;
+  }
+
+  .nav-btn span::before {
+    content: "";
+    position: absolute;
+    bottom: 10px;
+  }
+
+  .nav-btn span::after {
+    content: "";
+    position: absolute;
+    top: 10px;
   }
 }
