@@ -1,7 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+@font-face {
+  font-family: "main";
+  src: url("./assets/fonts/font3.ttf");
+}
+
+:root {
+  --primary: #1f3ca7;
+  --secondary: #09ff7d;
+}
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: Lato;
 }
 ul {
   list-style: none;
@@ -10,17 +21,16 @@ ul {
 body {
   font-size: 1rem;
   line-height: 1.6;
-  background-color: gainsboro;
   color: white;
 }
 
 header {
-  background-color: #09ff7d;
+  background-color: var(--secondary);
   padding: 0.5rem 0;
-  /* height: 15vh;
+  height: 15vh;
   position: fixed;
   z-index: 999;
-  width: 100%; */
+  width: 100%;
 }
 
 nav {
@@ -78,7 +88,7 @@ nav a {
   position: absolute;
   width: 100%;
   left: 0;
-  background-color: #09ff7d;
+  background-color: var(--secondary);
   display: none;
   /* transition: all 3s ease; */
 }
@@ -125,6 +135,71 @@ nav a {
 .nav-btn {
   display: none;
 }
+section {
+  height: 100vh;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.landing-image {
+  width: 350px;
+  margin-top: 3rem;
+  border-radius: 15px;
+  border: 3px solid gray;
+}
+
+.btn-text {
+  font-size: 18px;
+}
+
+.btn {
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  background-color: #1f3ca7;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.4s ease;
+}
+.btn:hover {
+  background-color: var(--secondary);
+  transition: background-color 0.8s ease;
+  color: #f3f3f3;
+}
+
+.first-section {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.main-text {
+  color: black;
+  font-size: 70px;
+  font-family: main;
+  line-height: initial;
+}
+
+.top-margin {
+  margin-top: 20px;
+}
+
+.box-1 {
+  display: flex;
+  flex-direction: column;
+  padding-top: 6rem;
+  width: 45%;
+}
+
+.colored-text {
+  color: var(--primary);
+}
+
+.joinus-text {
+  color: #727272;
+  font-size: 18px;
+}
 
 @media screen and (max-width: 830px) {
   nav {
@@ -133,8 +208,8 @@ nav a {
   .menu {
     position: absolute;
     right: 0;
-    top: 12%;
-    background-color: #09ff7d;
+    top: 70%;
+    background-color: var(--secondary);
     transform: scale(1, 0);
     transition: transform 400ms ease-in-out;
     transform-origin: top;
@@ -172,7 +247,7 @@ nav a {
     width: 100%;
     left: -120px;
     top: 0;
-    background-color: #48f398;
+    background-color: var(--secondary);
     display: none;
     transition: all 3s ease;
   }
