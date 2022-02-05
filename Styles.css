@@ -288,6 +288,7 @@ section {
     width: 35px;
     background-color: white;
     position: relative;
+    transition: all 0.5s ease-in-out;
   }
 
   .nav-btn span::before {
@@ -300,5 +301,21 @@ section {
     content: "";
     position: absolute;
     top: 10px;
+  }
+
+  .toogle-nav:checked ~ .nav-btn span {
+    background: transparent;
+  }
+
+  .toogle-nav:checked ~ .nav-btn span::before {
+    transform: rotate(45deg);
+    bottom: 0px;
+    transition: all 0.5s ease-in-out;
+  }
+
+  .toogle-nav:checked ~ .nav-btn span::after {
+    top: 0px;
+    transform: rotate(-45deg);
+    transition: all 0.5s ease-in-out;
   }
 }
