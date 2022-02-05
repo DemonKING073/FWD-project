@@ -27,9 +27,7 @@ body {
 header {
   background-color: var(--secondary);
   padding: 0.5rem 0;
-  height: 15vh;
-  position: fixed;
-  z-index: 999;
+  /* z-index: 999; */
   width: 100%;
 }
 
@@ -90,7 +88,7 @@ nav a {
   left: 0;
   background-color: var(--secondary);
   display: none;
-  /* transition: all 3s ease; */
+  transition: all 3s ease;
 }
 .submenu a {
   text-align: left;
@@ -202,13 +200,37 @@ section {
 }
 
 @media screen and (max-width: 830px) {
+  .landing-image {
+    width: 250px;
+  }
+  .landing-pic-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .colored-text {
+    font-size: 14px;
+  }
+  .joinus-text {
+    font-size: 14px;
+  }
+  .box-1 {
+    width: 100%;
+    padding-top: 0px;
+  }
+  .first-section {
+    display: block;
+  }
+  .main-text {
+    font-size: 40px;
+  }
   nav {
     margin-left: 20px;
   }
   .menu {
     position: absolute;
     right: 0;
-    top: 70%;
+    top: 12%;
     background-color: var(--secondary);
     transform: scale(1, 0);
     transition: transform 400ms ease-in-out;
