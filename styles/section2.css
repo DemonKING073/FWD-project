@@ -1,0 +1,81 @@
+.course-card {
+  width: 300px;
+  height: 420px;
+  background-color: #eeeeee;
+  border-radius: 10px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  border-bottom: 8px solid #96fcc6;
+  padding-top: 2px;
+}
+
+.course-card:hover {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  border-bottom: 8px solid var(--secondary);
+}
+
+.course-container {
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.computing {
+  background-image: url("../assets/images/computing.jpg");
+  height: 45%;
+  background-position: center;
+  background-size: cover;
+  margin: 10px;
+  border-radius: 6px;
+}
+
+.business {
+  background-image: url("../assets/images/business.jpg");
+  height: 45%;
+  background-position: center;
+  background-size: cover;
+  margin: 10px;
+  border-radius: 6px;
+}
+
+.cloud {
+  background-image: url("../assets/images/cloud.jpg");
+  height: 45%;
+  background-position: center;
+  background-size: cover;
+  margin: 10px;
+  border-radius: 6px;
+}
+
+.card-title {
+  color: black;
+}
+
+.card-desc {
+  color: #6f6f6f;
+}
+
+.card-footer {
+  display: flex;
+  margin-top: 35px;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-footer-title {
+  font-size: 14px;
+}
+
+.course-card a {
+  text-decoration: none;
+  color: #888888;
+}
+.course-card a:hover {
+  color: var(--primary);
+}
+
+.card-icon {
+  margin-left: 4px;
+  font-size: 18px;
+}
