@@ -21,6 +21,14 @@
   justify-content: space-around;
 }
 
+@media screen and (max-width: 1050px) {
+  .course-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
 .computing {
   background-image: url("../assets/images/computing.jpg");
   height: 45%;
