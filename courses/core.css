@@ -4,6 +4,7 @@ table {
 th,
 caption {
   text-align: left;
+  font-family: Arial, Helvetica, sans-serif;
 }
 table,
 th,
@@ -23,4 +24,47 @@ tr:nth-child(even) {
 }
 tr:nth-child(odd) {
   background-color: #1f3ca7;
+}
+
+#nav {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  background-color: rgb(245, 245, 245);
+  float: left;
+  padding: 10px;
+  text-align: justify;
+}
+@media screen and (max-width: 600px) {
+  .logo {
+    display: block;
+    width: 100%;
+  }
+
+  #nav {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .logo {
+    display: block;
+    width: 100%;
+  }
+
+  #nav {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 1080px) {
+  .logo {
+    display: block;
+    width: 100%;
+  }
+
+  #nav {
+    width: 100%;
+  }
+}
+
+h2 {
+  color: #1f3ca7;
 }
