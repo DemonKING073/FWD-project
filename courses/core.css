@@ -1,5 +1,5 @@
 * {
-    margin: 2px;
+    margin: 5px;
     padding: 2px;
 }
 
@@ -28,11 +28,57 @@ tr:nth-child(even){
     background-color: #ddd;
 }
 tr:nth-child(odd){
-    background-color: rgb(45, 45, 240);
+    background-color: #1f3ca7;
+}
+
+#nav {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: rgb(245, 245, 245);
+    float: left;   
+    padding: 10px;
+    text-align: justify;
+
+}
+@media screen and (max-width:600px)
+{
+    .logo {
+        display: block;
+        width: 100%;
+    }
+
+    #nav{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:768px)
+{
+    .logo {
+        display: block;
+        width: 100%;
+    }
+    
+    #nav{
+        width: 100%;
+    }
+}
+@media screen and (max-width:1080px)
+{
+    .logo {
+        display: block;
+        width: 100%;
+    }
+    
+    #nav{
+        width: 100%;
+    }
 }
 
 
 
+h2{
+    color: #1f3ca7;
+}
 
 
 
