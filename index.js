@@ -1,6 +1,5 @@
 var counter = 1;
 setInterval(function () {
-  console.log(counter);
   if (counter == 1) {
     document.getElementById(`radio4`).checked = false;
   }
@@ -12,3 +11,19 @@ setInterval(function () {
     counter = 1;
   }
 }, 5000);
+
+var scrollBtn = document.getElementsByClassName('scroll-container')
+
+window.onscroll = () => {
+  onScroll();
+};
+
+const onScroll = () => {
+  console.log(scrollBtn);
+  if(document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    scrollBtn[0].style.display = 'block';
+    scrollBtn[0].style.backgroundColor = 'red';
+  } else {
+    scrollBtn[0].style.display = 'none';
+  }
+}

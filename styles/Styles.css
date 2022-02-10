@@ -15,6 +15,7 @@
   margin: 0;
   padding: 0;
   font-family: Lato;
+  scroll-behavior: smooth;
 }
 ul {
   list-style: none;
@@ -206,7 +207,8 @@ section {
     flex-direction: column;
   }
   .landing-image {
-    width: 250px;
+    width: 300px;
+    height: 380px;
   }
   .landing-pic-container {
     display: flex;
@@ -223,6 +225,8 @@ section {
   .box-1 {
     width: 100%;
     padding-top: 0px;
+    justify-content: center;
+    align-items: center;
   }
   .first-section {
     display: block;
@@ -350,7 +354,15 @@ section {
 
 @media screen and (max-width: 750px) {
   .landing-image {
-    width: 170px;
+    width: 300px;
+    height: 340px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .landing-image {
+    width: 280px;
+    height: 300px;
   }
 }
 
@@ -442,8 +454,8 @@ footer {
   padding-bottom: 1rem;
   background-color: var(--lightBlue);
   display: flex;
-  padding-left: 4rem;
-  padding-right: 4rem;
+  padding-left: 5rem;
+  padding-right: 5rem;
   flex: 1;
   flex-direction: row;
   justify-content: space-between;
@@ -487,4 +499,35 @@ footer a {
   footer {
     font-size: 12px;
   }
+}
+
+/*scrollup btn */
+.scroll-box {
+  position: fixed;
+  z-index: 888;
+  right: 40px;
+  bottom: 30px;
+  border: 0.1px solid blue;
+  border-radius: 4px;
+  background-color: #e6f3fb;
+  height: 35px;
+  width: 35px;
+  transition: transform 0.5s ease-in-out;
+}
+.scroll-container {
+  cursor: pointer;
+  display: block;
+}
+
+.scroll-container:hover .scroll-box {
+  transform: rotate(45deg);
+  transition: transform 0.5s ease-in-out;
+}
+
+.scroll-icon {
+  color: var(--primary);
+  position: fixed;
+  right: 50px;
+  bottom: 38px;
+  z-index: 999;
 }
