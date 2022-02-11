@@ -2,7 +2,6 @@
   display: flex;
   flex: 1;
   height: 60vh;
-  margin-top: 4rem;
   justify-content: center;
   align-items: center;
   flex-direction: column;
@@ -49,4 +48,33 @@
 
 .form-btn:hover {
   background-color: var(--primary);
+}
+
+@media screen and(max-width:400px) {
+  .form-container {
+    height: 40vh;
+    margin-top: 2rem;
+  }
+
+  .form {
+    background-color: #e3e3e3;
+    /* padding: 2rem; */
+    width: 250px;
+    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+  }
+}
+
+.admission-container {
+  padding: 3rem;
+}
+
+.admission-sub-heading {
+  color: var(--lightBlue);
+  margin: 1rem;
+}
+
+.admission-container ul {
+  margin-top: 1rem;
+  margin-left: 2rem;
+  color: #5d5d5d;
 }
