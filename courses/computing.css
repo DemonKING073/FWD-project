@@ -1,0 +1,56 @@
+:root {
+  --primary: #1f3ca7;
+  --secondary: #09ff7d;
+  --lightBlue: #88add5;
+  --fullLightBlue: #b5c4d7;
+}
+
+.course-container {
+  display: grid;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  align-items: center;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
+}
+
+@media screen and (max-width: 1200px) {
+  .course-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (max-width: 750px) {
+  .course-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 300px;
+  margin: 1rem;
+}
+.card-top {
+  width: 300px;
+  background-color: var(--lightBlue);
+  padding: 20px;
+  border-radius: 6px 6px 0 0;
+  color: white;
+}
+
+.card-bottom {
+  padding-left: 1rem;
+  background-color: #d6e3ff;
+  padding-bottom: 1rem;
+  padding-right: 10px;
+}
+.card ul {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-self: flex-start;
+  padding-left: 18px;
+  color: #898989;
+}

@@ -17,7 +17,7 @@
   font-family: Lato;
   scroll-behavior: smooth;
 }
-ul {
+nav ul {
   list-style: none;
 }
 
@@ -516,7 +516,7 @@ footer a {
 }
 .scroll-container {
   cursor: pointer;
-  display: block;
+  display: none;
 }
 
 .scroll-container:hover .scroll-box {
