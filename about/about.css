@@ -1,0 +1,51 @@
+.about-img-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.about-text {
+  color: #4b4b4b;
+  padding: 5px;
+  font-size: 17px;
+}
+
+.about-heading {
+  color: var(--primary);
+  font-size: 20px;
+  padding-top: 1rem;
+}
+
+.about-ul {
+  color: #4b4b4b;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 0.5rem;
+  padding-bottom: 2rem;
+}
+
+.ul-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+@media screen and (max-width: 800px) {
+  .ul-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    margin-left: 4rem;
+  }
+  .about-ul {
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0.5rem;
+    padding-bottom: 2rem;
+  }
+  .about-us-img {
+    width: 300px;
+  }
+}
